@@ -1,0 +1,13 @@
+version: '3.7'
+services: 
+    react-container: 
+        container_name: react-container
+        image: node
+        ports: 
+            - "5566:5566"
+        volumes: 
+            - $PWD:/web
+        working_dir: /web
+        environment: 
+            NODE_ENV: development
+        command: npm start

@@ -1,0 +1,19 @@
+version: '3.7'
+services:     
+    tt-backend:
+        container_name: tt-backend
+        image: node
+        volumes: 
+            - .:/api
+        working_dir: /api
+        user: node
+        command: npm start
+        restart: always
+        ports: 
+            - "8001:8001"
+        environment: 
+            NODE_ENV: development
+        networks: 
+            - mysql_default
+networks: 
+    mysql_default:

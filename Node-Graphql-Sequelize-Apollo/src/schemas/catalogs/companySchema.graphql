@@ -1,0 +1,26 @@
+type Company {
+    id: ID
+    name: String
+    code: String
+    active: String    
+}
+
+type Result {
+    type: String
+    message: String
+}
+
+input CompanyInput {
+    name: String
+    code: String
+    active: String
+}
+
+type Query {
+    getCompany(id:ID): Company
+}
+
+type Mutation {
+    createCompany(entity:CompanyInput): Result
+    updateCompany(entity:CompanyInput, id:ID): Result
+}
