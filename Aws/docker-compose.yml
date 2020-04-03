@@ -1,0 +1,8 @@
+version: '3.7'
+services: 
+  aws:
+    container_name: ubuntu-aws
+    image: ubuntu-aws-image
+    build:
+      context: .
+    restart: always

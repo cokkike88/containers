@@ -1,0 +1,1 @@
+docker run --name mongodb -p 32732:27017 --restart=always -d mongo
