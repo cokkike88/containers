@@ -7,3 +7,13 @@ exit
 
 # 2. Run docker-compose
 docker-compose up -d
+
+
+
+# update dependencies
+npm update
+
+# upgrade dependencies to major version
+npm install -g npm-check-updates
+ncu -u
+npm install
