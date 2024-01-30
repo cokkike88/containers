@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  mongodb:
+    container_name: mongo
+    image: mongo
+    restart: always
+    ports:
+      - "32732:27017"
